@@ -1,0 +1,54 @@
+# .gitignore file for C++
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Directories
+build/
+Debug/
+Release/
+.vs/
+.vscode/
+*.vscode*
+
+# Other
+*.swp
+*.swo
+*.bak
+*.tmp
+*.log
+*.map
+*.ipch

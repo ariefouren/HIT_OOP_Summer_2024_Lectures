@@ -73,4 +73,7 @@ Point middlePoint(const Point &p1, const Point &p2)
     middle.x = (p1.x + p2.x) / 2;
     middle.y = (p1.y + p2.y) / 2;
     return middle;  // return the new point
+
+    // the above code can be written in a single line:
+    // return { (p1.x + p2.x) / 2, (p1.y + p2.y) / 2 };
 }

@@ -9,12 +9,11 @@
 
 using namespace std;
 
-
 int main()
 {
-	Date date1(9, 7, 2023);
-	Date date2;		// use constructor with default values 01/01/2023
-	Date date3(16, 7); // use constructor with default value for year (2023)
+	Date date1(1, 8, 2024);
+	Date date2;		        // use constructor with default values 01/01/2024
+	Date date3(16, 7);      // use constructor with default value for year (2023)
 	Date date4(12, 31, 2023);  // incorrect date
 
 	Date date5 = Date(7, 7, 2001);  // create a new object and copy it to date5

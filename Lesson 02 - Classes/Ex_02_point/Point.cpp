@@ -2,28 +2,13 @@
 // File: Point.cpp
 // implementation of class Point
 //
-
 #include <iostream>
 #include <iomanip>		// for setw()
 
 #include "Point.h"		// include the header file 
 						// with the definition of the class Point
-#define WIDTH 3		// the width of output for setw(WIDTH) 
+#define WIDTH 3		    // the width of output for setw(WIDTH) 
 using namespace std;
-
-// default constructor
-Point::Point()
-{
-    x = 0.0; // initialize x to 0.0
-    y = 0.0; // initialize y to 0.0
-}
-
-// constructor with parameters
-Point::Point(double xVal, double yVal)
-{
-    x = xVal; // initialize x to xVal
-    y = yVal; // initialize y to yVal
-}
 
 // set the value of x
 void Point::setX(double xVal)
@@ -64,4 +49,3 @@ void Point::print()
 }
 
 // end of Point.cpp
-

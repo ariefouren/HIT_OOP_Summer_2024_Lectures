@@ -25,8 +25,6 @@ int main()
 
 	ConstructAndDestruct obj4(4, "(local in main)");
 	
-	cout << "Press Enter to continue...";
-	cin.ignore();
 	cout << "End of main()\n\n";
 
 }

@@ -78,7 +78,7 @@ int main()
     // This creates an object of Point on the heap and p9 is a pointer to it.
 
     // Way 5: Parameterized constructor using parentheses in dynamic allocation
-    Point* p10 = new Point(9.0, 10.0); // Object p10 is created using the parameterized constructor (dynamic allocation)
+    Point* p10 = new Point{9.0, 10.0}; // Object p10 is created using the parameterized constructor (dynamic allocation)
     // This is equivalent to the above dynamic allocation method.
 
     // print the points created using the parameterized constructor

@@ -9,12 +9,16 @@ using namespace std;
 #define MAX_MINUTES 60
 #define MAX_SECONDS 60
 
+#define DEFAULT_HOUR 0
+#define DEFAULT_MINUTE 0
+#define DEFAULT_SECOND 0
+
 // default constructor
 Time::Time()
 {
-    hour = 0;
-    minute = 0;
-    second = 0;
+    setHour(DEFAULT_HOUR);      // set the hour to default value
+    setMinute(DEFAULT_MINUTE);  // set the minute to default value
+    setSecond(DEFAULT_SECOND);  // set the second to default value
 }
 
 // constructor with parameters
@@ -32,7 +36,7 @@ void Time::setHour(int h)
     if (0 <= h && h < MAX_HOURS)  
         hour = h; 
     else 
-        hour = 0;   // set the hour to 0 if the value is invalid
+        hour = DEFAULT_HOUR;   // set the hour to default value if the value is invalid
 }
 
 // set the minute
@@ -41,7 +45,7 @@ void Time::setMinute(int m)
     if (0 <= m && m < MAX_MINUTES) 
         minute = m; 
     else 
-        minute = 0;  // set the minute to 0 if the value is invalid
+        minute = DEFAULT_MINUTE;  // set the minute to default value if the value is invalid
 }
 
 // set the second
@@ -50,7 +54,7 @@ void Time::setSecond(int s)
     if (0 <= s && s < MAX_SECONDS) 
         second = s; 
     else 
-        second = 0;  // set the second to 0 if the value is invalid
+        second = DEFAULT_SECOND;  // set the second to default value if the value is invalid
 }
 
 // get the hour

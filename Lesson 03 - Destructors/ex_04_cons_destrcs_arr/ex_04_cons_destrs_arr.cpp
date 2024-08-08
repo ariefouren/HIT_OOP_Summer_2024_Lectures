@@ -1,4 +1,4 @@
-// File: ex_02_cons_destrs.cpp
+// File: ex_04_cons_destrs_local.cpp
 // demonstrates the order of constructor and destructor calls
 #include <iostream>
 #include <string>

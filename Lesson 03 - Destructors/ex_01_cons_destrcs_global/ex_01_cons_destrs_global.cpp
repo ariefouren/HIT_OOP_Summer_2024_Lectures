@@ -1,4 +1,4 @@
-// File: ex_01_cons_destrs.cpp
+// File: ex_01_cons_destrs_global.cpp
 // demonstrates the order of constructor and destructor calls
 #include <iostream>
 #include <string>
@@ -12,10 +12,11 @@ private:
     string name;
 };
 
+// define two global objects
+    A a1("global a1");
+    A a2("global a2");
+
 int main () {
     cout << "main() starts" << endl;;
-    A a1("a1");
-    A a2("a2");
-
-    cout << "\nmain() ends" << endl;
+    cout << "main() ends" << endl;
 }

@@ -1,4 +1,4 @@
-// File: ex_04_cons_destrs.cpp
+// File: ex_03_cons_destrs_static_local.cpp
 // demonstrates the order of constructor and destructor calls
 #include <iostream>
 #include <string>
@@ -16,11 +16,13 @@ private:
     const char* name;
 };
 
-static A global1("global1");           // Static global variable
-static A global2("global2");           // Another static global variable
+A global1("global1");           // global variable defined outside of main
+A global2("global2");           // global variable defined outside of main
 
 void function() {
-    static A local("Local");    // Static local variable
+    cout << "\nfunction() starts" << endl;
+    static A local1("local1");    // Static local variable defined inside a function
+    cout << "function() ends" << endl;
 }
 
 int main() {

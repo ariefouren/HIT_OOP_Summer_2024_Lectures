@@ -14,6 +14,13 @@ public:
     void setMinute(int m); // set the minute. if the value is invalid, set it to 0
     void setSecond(int s); // set the second. if the value is invalid, set it to 0
 
+    int &badSetHour(int h); // public function that returns a not-const reference 
+                            // to the private member hour
+                            // DANGEROUS ! Breaks encapsulation !
+                            // allows an access and modification of the private member hour
+                            // should be avoided !
+                            
+
     int getHour() const; // get the hour
     int getMinute() const; // get the minute
     int getSecond() const; // get the second

@@ -30,6 +30,17 @@ Time::Time(int h, int m, int s)
     setSecond(s);
 }
 
+// public function that returns a not-const reference 
+// to the private member hour
+// DANGEROUS ! Breaks encapsulation !
+// allows an access and modification of the private member hour
+// should be avoided !
+int &Time::badSetHour(int h)      
+{
+    setHour(h);
+    return hour; // return a not-const reference to the private member hour
+}
+
 // set the hour
 void Time::setHour(int h)
 {

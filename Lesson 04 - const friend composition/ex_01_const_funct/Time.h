@@ -1,5 +1,6 @@
 // File: Time.h
 // definitions for the Time class
+// demonstrates const functions 
 
 #pragma once // include the header file only once
 

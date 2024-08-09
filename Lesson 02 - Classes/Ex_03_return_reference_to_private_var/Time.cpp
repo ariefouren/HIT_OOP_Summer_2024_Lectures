@@ -30,18 +30,6 @@ Time::Time(int h, int m, int s)
     setSecond(s);
 }
 
-// bad function that returns a reference to a private variable
-// DANGEROUS ! Breaks encapsulation, should be avoided
-int &Time::badSetHour(int h)    
-{
-    if (0 <= h && h < MAX_HOURS)  
-        hour = h; 
-    else 
-        hour = DEFAULT_HOUR;   // set the hour to default value if the value is invalid
-        return hour;            // return a reference to the private variable
-                            // DANGEROUS ! breaks encapsulation, should be avoided
-}                                
-
 // set the hour
 void Time::setHour(int h)
 {
@@ -88,13 +76,11 @@ int Time::getSecond() const
 }
 
 // print the time in the format hh:mm:ss
-// the const function
 void Time::print() const
 {
     cout << (hour < 10 ? "0" : "") << hour << ":"
          << (minute < 10 ? "0" : "") << minute << ":"
-         << (second < 10 ? "0" : "") << second;
+         << (second < 10 ? "0" : "") << second << endl;
 }
-
 
 // end of Time.cpp

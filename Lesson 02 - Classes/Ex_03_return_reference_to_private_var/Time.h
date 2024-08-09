@@ -14,20 +14,11 @@ public:
     void setMinute(int m); // set the minute. if the value is invalid, set it to 0
     void setSecond(int s); // set the second. if the value is invalid, set it to 0
 
-    int &badSetHour(int h); // bad function that returns a reference to a private variable
-                            // DANGEROUS ! Breaks encapsulation, should be avoided
-                            
     int getHour() const; // get the hour
     int getMinute() const; // get the minute
     int getSecond() const; // get the second
 
     void print() const; // print the time in the format hh:mm:ss
-                        // the function is declared as const because it does not modify the object
-                        // const functions can be called for const objects only
-    void print();       // not-const print function
-                        // can be called for non-const objects
-                        // const is a part of the function signature
-                        // therefore the function overloading is allowed
 
 private:
     int hour;

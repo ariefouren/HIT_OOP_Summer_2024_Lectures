@@ -39,7 +39,20 @@ Point::~Point()
 // print the point
 void Point::print() const
 {
-	cout << "Point(" << x << ", " << y << ") id=" << id;
+	cout << "Point[id = " << id << ", " <<
+        "x = " << x << ", " << 
+        "y = " << y << "]";
 }
 
+// get x
+double Point::getX() const
+{
+    return x;
+}
+
+// get y
+double Point::getY() const
+{
+    return y;
+}
 

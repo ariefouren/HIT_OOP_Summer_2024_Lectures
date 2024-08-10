@@ -1,8 +1,8 @@
-#pragma once
 //
 // File: Rectangle.h
 // definition of class Rectangle
 // demonstrates composition and the order 
+#pragma once
 #include "Point.h"
 
 class Rectangle

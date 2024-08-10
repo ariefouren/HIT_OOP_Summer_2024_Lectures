@@ -23,8 +23,10 @@ Rectangle::Rectangle(): id(++count)
 
 // constructor with parameters
 Rectangle::Rectangle(const Point& p1, const Point& p2) :
-	p1(p1), p2(p2),		// p1 and p2 are initialized using default copy constructor
-                        // of class Point
+	p1(p1.getX(), p1.getY()), 
+    p2(p2.getX(), p2.getY()),		
+        // p1 and p2 are initialized using constructor with parameters
+        // of class Point
     id(++count)
 {
 	cout << "constructor with parameters for ";
@@ -35,12 +37,12 @@ Rectangle::Rectangle(const Point& p1, const Point& p2) :
 // print the rectangle
 void Rectangle::print() const
 {
-    cout << "Rectangle (";
+    cout << "Rectangle [id = " << id << ", p1 = ";
     p1.print();
     cout << ", ";
+    cout << "p2 = ";
     p2.print();
-    cout << ")";
-    cout << " id =" << id;
+    cout << "]";
 }
 
 // destructor
@@ -48,5 +50,5 @@ Rectangle::~Rectangle()
 {
 	cout << "destructor for ";
     print();
-    cout << endl;
+    cout << endl << endl;
 }

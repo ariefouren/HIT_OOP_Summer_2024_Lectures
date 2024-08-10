@@ -1,8 +1,8 @@
-#pragma once
 //
 // File: Point.h
 // definition of class Point
 //
+#pragma once
 
 class Point
 {
@@ -11,6 +11,8 @@ public:
     Point(double x, double y);  // constructor with parameters
 	~Point();                   // destructor
 	void print() const;         // print the point
+    double getX() const;        // get x
+    double getY() const;        // get y
 
 private:
 	double x;

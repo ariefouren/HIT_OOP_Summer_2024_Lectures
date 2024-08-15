@@ -45,7 +45,8 @@ double Point::getY() const
 // to allow cascading calls
 Point& Point::setX(double x)
 {
-    this->x = x;
+    this->x = x;    // this pointer is used to resolve the ambiguity 
+                    // between the member variable x and the parameter x
     return *this; // return the reference to the object to allow cascading calls
 }
 
@@ -54,6 +55,7 @@ Point& Point::setX(double x)
 // to allow cascading calls
 Point& Point::setY(double y)
 {
-    this->y = y;
+    this->y = y;    // this pointer is used to resolve the ambiguity 
+                    // between the member variable y and the parameter y
     return *this; // return the reference to the object to allow cascading calls
 }

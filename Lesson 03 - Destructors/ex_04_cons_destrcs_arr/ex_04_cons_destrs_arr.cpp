@@ -7,20 +7,20 @@ using namespace std;
 class A {
 public:
     A(){ 
-        id = count ++;
+        id = privateVar ++;
         cout << "A constructor for object id = " << id << endl; 
     }
     ~A() { 
-        count --;
+        privateVar --;
         cout << "A destructor for object id = " << id << endl; 
     }
 
 private:
-    static int count;   // the number of objects created
+    static int privateVar;   // the number of objects created
     int id;             // the id of the object
 };
 
-int A::count = 0; // initialize the static member variable
+int A::privateVar = 0; // initialize the static member variable
 int main () {
     cout << "main() starts" << endl;
     cout << "Defining local array: A arr1[2];" << endl;

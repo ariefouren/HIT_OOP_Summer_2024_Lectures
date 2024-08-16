@@ -1,6 +1,5 @@
 // File: Time.h
 // definitions for the Time class
-// demonstrates const functions 
 
 #pragma once // include the header file only once
 
@@ -15,9 +14,6 @@ public:
     void setMinute(int m); // set the minute. if the value is invalid, set it to 0
     void setSecond(int s); // set the second. if the value is invalid, set it to 0
 
-    int &badSetHour(int h); // bad function that returns a reference to a private variable
-                            // DANGEROUS ! Breaks encapsulation, should be avoided
-                            
     int getHour() const; // get the hour
     int getMinute() const; // get the minute
     int getSecond() const; // get the second

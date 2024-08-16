@@ -94,4 +94,3 @@ void Time::print()
          << (second < 10 ? "0" : "") << second;
 }
 // end of Time.cpp
-

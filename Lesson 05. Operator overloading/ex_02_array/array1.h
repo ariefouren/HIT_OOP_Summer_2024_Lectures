@@ -26,9 +26,13 @@ public:
    bool operator!=( const Array &right ) const  
       { return ! ( *this == right ); }
    
-   int &operator[]( int );              // subscript operator
-   const int &operator[]( int ) const;  // subscript operator
-   operator int()
+   int &operator[]( int );             // subscript operator, 
+                                       // returns lvalue
+                                       // allows modification of arr[i]
+   const int &operator[]( int ) const; // subscript operator, const
+                                       // version, returns rvalue
+                                       // (cannot be used as lvalue)
+   operator int() // conversion to int type operator
    {
 	   return size;
    }

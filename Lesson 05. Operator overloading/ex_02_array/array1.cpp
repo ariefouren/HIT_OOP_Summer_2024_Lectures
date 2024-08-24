@@ -11,7 +11,7 @@ using std::endl;
 using std::setw;
 
 #include <cstdlib>
-#include <cassert>
+#include <cassert>      // for assert
 #include "array1.h"
 
 // Initialize static data member at file scope

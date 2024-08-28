@@ -53,6 +53,8 @@ int Array::getSize() const { return size; }
 
 // Overloaded assignment operator
 // const return avoids: ( a1 = a2 ) = a3
+// but allows ( a1 = a2 ) = a2
+// the operator returns rval
 const Array &Array::operator=( const Array &right )
 {
    if ( &right != this ) {  // check for self-assignment
@@ -89,6 +91,7 @@ bool Array::operator==( const Array &right ) const
 
 // Overloaded subscript operator for non-const Arrays
 // reference return creates an lvalue
+// allows arr[i] = x;
 int &Array::operator[]( int subscript )
 {
    // check for subscript out of range error
@@ -99,6 +102,8 @@ int &Array::operator[]( int subscript )
 
 // Overloaded subscript operator for const Arrays
 // const reference return creates an rvalue
+// allows cout << arr[i];
+// but not arr[i] = x;
 const int &Array::operator[]( int subscript ) const
 {
    // check for subscript out of range error

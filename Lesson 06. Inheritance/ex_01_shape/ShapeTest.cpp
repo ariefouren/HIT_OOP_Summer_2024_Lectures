@@ -19,4 +19,7 @@ int main()
 
     // call to function area() of the derived class:
     cout << "c1.area() = " << c1.area() << endl;
+    // call to functions getX() and getY() of the base class:
+    cout << "c1.getX() = " << c1.getX() << endl;
+    cout << "c1.getY() = " << c1.getY() << endl;
 }

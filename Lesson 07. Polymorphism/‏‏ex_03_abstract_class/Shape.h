@@ -13,7 +13,7 @@ public:
 	~Shape();
 
 	virtual string toString() const; // virtual function allows dynamic binding
-	double area() const;
+	virtual double area() const = 0; // pure virtual function makes Shape an abstract class
 	
 protected:
 	double x;			// x coordinate of the center of the shape

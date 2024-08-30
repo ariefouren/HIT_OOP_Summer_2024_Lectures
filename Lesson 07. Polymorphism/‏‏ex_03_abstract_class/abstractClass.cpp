@@ -1,7 +1,6 @@
 //
-// dynamicBindingTest.cpp
-// Testing dynamic binding of pointers to base and derived classes
-// (polymorphism)
+// File: abstractClass.cpp	
+// Demonstrates the use of abstract classes and pure virtual functions
 //   
  
 #include <iostream>

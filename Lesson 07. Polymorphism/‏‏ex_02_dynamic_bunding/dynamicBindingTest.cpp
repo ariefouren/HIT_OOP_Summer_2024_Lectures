@@ -1,8 +1,9 @@
 //
-// staticBindingTest.cpp
-// Testing static binding of pointers to base and derived classes
+// dynamicBindingTest.cpp
+// Testing dynamic binding of pointers to base and derived classes
+// (polymorphism)
 //   
-
+ 
 #include <iostream>
 #include "Shape.h"
 #include "Circle.h"

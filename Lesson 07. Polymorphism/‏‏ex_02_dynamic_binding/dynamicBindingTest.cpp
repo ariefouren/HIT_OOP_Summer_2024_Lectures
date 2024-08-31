@@ -60,9 +60,11 @@ int main()
 	for (int i = 0; i < numOfShapes; i++)
 	{
 		cout << "shapesArr[" << i << "]->toString() = " << shapesArr[i]->toString() << endl;
-		
+		cout << "shapesArr[" << i << "]->area() = " << shapesArr[i]->area() << endl;
+
 		Shape& shapeRef = *shapesArr[i];
-		cout << "shapeRef.toString() =      " << shapeRef.toString() << endl << endl;
+		cout << "shapeRef.toString() =      " << shapeRef.toString() << endl;
+		cout << "shapeRef.area() =           " << shapeRef.area() << endl << endl;
 	}
 
 }

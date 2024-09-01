@@ -1,5 +1,5 @@
 //
-// File: abstractClass.cpp	
+// File: abstractClassTest.cpp	
 // Demonstrates the use of abstract classes and pure virtual functions
 //   
  

@@ -2,7 +2,7 @@
 // DynamicCastingTest.cpp
 // Testing dynamic casting and virtual destructors
 //   
-#include <typeinfo> // for operator typeid
+#include <typeinfo> // for operator typeid and class type_info
 #include <iostream>
 #include "Shape.h"
 #include "Circle.h"

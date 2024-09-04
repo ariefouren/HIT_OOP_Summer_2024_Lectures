@@ -13,10 +13,10 @@ using namespace std;
 int main()
 {
 	// Pointers and inheritance 
-	// with static binding, the type of the function invoked 
-	// depends on the type of the pointer, not on the type of the object 
-	cout << "--- 1.Static binding: the type of the function invoked depends on the type of the pointer" << endl << endl; 
-
+	// With dynamic binding, the type of the function invoked
+	// depends on the type of the object, not on the type of the pointer
+	cout << "--- 1. Dynamic binding: the type of the function invoked depends on the type of the object" << endl << endl;
+	
 	Shape* shapePtr = new Shape(0, 0);
 	cout << "after shapePtr = new Shape(0, 0);" << endl;
 	cout << "shapePtr->toString() = " << shapePtr->toString() << endl;

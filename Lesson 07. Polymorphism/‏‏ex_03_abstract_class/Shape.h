@@ -10,7 +10,8 @@ class Shape		// base class
 {
 public:
 	Shape(double x = 0, double y = 0);
-	~Shape();
+	virtual ~Shape(); // virtual destructor is necessary for dynamic binding
+					// of destructors in polymorphic classes
 
 	virtual string toString() const; // virtual function allows dynamic binding
 	virtual double area() const = 0; // pure virtual function makes Shape an abstract class

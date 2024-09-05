@@ -154,26 +154,35 @@ int main() {
     // FlyingCar object due to virtual inheritance from Machine
     Machine* machinePtr = dynamic_cast<Machine*>(flyingCarPtr);
 
-    // ERROR ! upcasting to base class "Vehicle" is ambiguous.
-    // inheritance of Car and Airplane from Vehicle is not virtual, therefore 
+    // ERROR ! upcasting from FlyingCar* to Vehicle* is ambiguous
+    // inheritance of Car and Airplane from Vehicle is not virtual, 
+    // therefore 
     // there are two objects that represent Vehicle in FlyingCar
     // Vehicle* vehiclePtr3 = dynamic_cast<Vehicle*>(flyingCarPtr);
 
-    
     // demonstrating dynamic downcast
     cout << "\n=== demonstrating dynamic downcast ===\n";
-    // OK, since FlyingCar is a Machine
+    // OK, since each FlyingCar is a Machine
     machinePtr = flyingCarPtr; 
 
-    // ERROR ! downcast from Machine* to Vehicle* is incorrect
-    // and generates a run-time error
+    // ERROR ! 
+    // the FlyingCar object contains two Vehicle objects
+    // therefore downcast from Machine* to Vehicle* is incorrect
+    // the complier doesn't recognize the ambiguity during compilation
+    // and it generates a run-time error     :(
     // vehiclePtr1 = dynamic_cast<Vehicle*>(machinePtr);
     // cout << vehiclePtr1->toString() << endl;
 
-    // OK. downcast from Machine* to Car* is unambiguous  
+    // OK: downcast from Machine* to Car* is unambiguous  
+    // since there is only one copy of Car object in FlyingCar object
     carPtr = dynamic_cast<Car*>(machinePtr);
 
-    // OK. downcast from Machine* to FlyingCar* is unambiguous  
+    // OK: downcast from Machine* to Airplane* is unambiguous
+    // since there is only one copy of Airplane object in FlyingCar object
+    Airplane* airplanePtr = dynamic_cast<Airplane*>(machinePtr);
+
+    // OK: downcast from Machine* to FlyingCar* is unambiguous 
+    // since there is only one copy of FlyingCar object in FlyingCar object 
     FlyingCar* flyingCarPtr2 = dynamic_cast<FlyingCar*>(machinePtr);
     
     cout << "\nFlyingCar: Car serial number: " <<
@@ -202,7 +211,7 @@ int main() {
     cout << "Car: serial number = "
         << carPtr->getSerialNumber() << endl;
 
-    Airplane* airplanePtr = dynamic_cast<Airplane*>(carPtr);
+    airplanePtr = dynamic_cast<Airplane*>(carPtr);
     cout << "Airplane: serial number = "
         << airplanePtr->getSerialNumber() << endl;
    return 0;

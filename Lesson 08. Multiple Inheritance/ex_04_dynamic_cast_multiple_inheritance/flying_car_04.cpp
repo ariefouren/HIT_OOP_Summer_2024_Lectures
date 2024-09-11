@@ -280,8 +280,6 @@ int main() {
         cout << "Downcast from Machine* to Airplane* to Vehicle* is incorrect." << endl;
     }
 
-
-
     // demonstrating cross-casting
     cout << "\n=== demonstrating cross-casting ===\n";
     carPtr = dynamic_cast<Car*>(flyingCarPtr);

@@ -22,7 +22,7 @@ public:
         return serialNumber;
     }
 
-    virtual string toString() const {
+    virtual  string toString() const {
         return "Vehicle: [serial number = " + 
         to_string(serialNumber) + "]";
     }

@@ -9,7 +9,7 @@ using namespace std;
 template<class N, class D, class Q = N>
 Q quotient(N numerator, D denominator)
 {
-	return (Q) numerator / denominator;
+	return (Q) (numerator / denominator);
 }
 
 

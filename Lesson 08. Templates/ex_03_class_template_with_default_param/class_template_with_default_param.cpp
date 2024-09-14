@@ -12,21 +12,31 @@ class Complex
 {
 public:
 	Complex(T re = 0, T im = 0) : re(re), im(im) {};
-	friend ostream& operator<<(ostream& os, const Complex& c)
-	{
-		os << "(" << c.re << (c.im >= 0 ? "+" : "") << c.im << "i)";
-		return os;
-	}
+
+	// Declare operator<<(ostream &, const Complex<T> &) as a friend
+	// function template for class Complex<T>. It makes 
+	// operator<<(ostream &, const Complex<int> &) a friend of Complex<int>
+	// and
+	// operator<<(ostream &, const Complex<double> &) a friend of Complex<double> etc.
+	// etc. 
+	template<class T>
+	friend ostream& operator<<(ostream& os, const Complex<T>& c);
 
 private:
 	T re, im;
 };
 
+template <class T>
+ostream& operator<<(ostream& os, const Complex<T>& c) {
+    os << "(" << c.re << (c.im >= 0 ? "+" : "") << c.im << "i)";
+    return os;
+}
 
 int main()
 {
 	int a = 1, b = 2;
 	double x = 3.1, y = 4.2;
+
 	Complex<int> complex1(a, b);
 	Complex<int> complex2(x, y);
 	Complex<double> complex3(a, b);

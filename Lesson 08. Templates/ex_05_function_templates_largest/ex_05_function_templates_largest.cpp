@@ -37,7 +37,7 @@ int main()
 	cout << "largest(" << x << ", " << b << ") = "
 		<< largest(x, b) << endl; // error: no instance of template matches the argument list
 	*/ 
-
+	largest<int>(x, b);
 	string s1 = "abc", s2 = "def";
 	cout << "largest(" << s1 << ", " << s2 << ") = "
 		<< largest(s1, s2) << endl; // string largest<string>(string, string)

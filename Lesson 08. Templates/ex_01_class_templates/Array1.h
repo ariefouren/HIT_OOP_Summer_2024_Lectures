@@ -18,10 +18,14 @@ using namespace std;
 // template <typename T>
 template <class T>
 class Array {
+   // declare operator<<(ostream &, const Array<T> &) as a friend
+   // function template for class Array
+   // operator<<(ostream &, const Array<int> &) is a friend of Array<int>
+   // operator<<(ostream &, const Array<double> &) is a friend of Array<double> etc.
    template <class T>
-        friend ostream &operator<<( ostream &, const Array<T> & );
+        friend ostream &operator<< ( ostream &, const Array<T> & );
    template <class T>
-        friend istream &operator>>( istream &, Array<T> & );
+        friend istream &operator>> ( istream &, Array<T> & );
 public:
    Array( int = 10 );                   // default constructor
    Array( const Array & );              // copy constructor
@@ -34,9 +38,7 @@ public:
    // Determine if two arrays are not equal (uses operator==).
    bool operator!=( const Array &right ) const  
       { return ! ( *this == right ); }
-   
-
-   
+      
     // subscript operator - returns l-value (reference to element of type T)
     T &operator[]( int );    
    
@@ -68,7 +70,8 @@ Array<T>::Array(int arraySize)
 
     for (int i = 0; i < size; i++)
         ptr[i] = T();  // default initialization for elements of type T
-// For built-in types, T() will initialize to 0 (e.g., int() will be 0, float() will be 0.0).
+// For built-in types, T() will initialize to 0 
+// (e.g., int() will be 0, float() will be 0.0, bool() will be false).
 // For user-defined types, T() will invoke the default constructor of type T.
 }
 

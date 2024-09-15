@@ -34,4 +34,10 @@ int main(){
         cout << endl;
     }
 
+    cout << "--- 3. Multiply the matrix by -2: \n";
+    for(auto& row : m){
+        for(auto& elem : row){
+            elem *= -2;
+        }
+    }
 }

@@ -1,7 +1,15 @@
-#include "IllegalLogArgumentException.h"
+#include <stdexcept>    // for runtime_error
 #include <iostream>     // for cout
 #include <cmath>        // for log
 using namespace std;
+
+// functions that detect illegal arguments to the log function
+// should throw an IllegalLogArgumentException
+class IllegalLogArgumentException : public runtime_error {
+public:
+    // call the base class constructor with the error message
+    IllegalLogArgumentException() : runtime_error("Illegal log argument") {}
+};
 
 // the Log function calculates the natural logarithm of a number
 // if the number is less than or equal to zero, it throws an IllegalLogArgumentException

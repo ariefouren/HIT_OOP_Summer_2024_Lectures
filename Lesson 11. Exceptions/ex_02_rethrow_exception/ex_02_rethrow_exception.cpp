@@ -21,11 +21,11 @@ void RethrowException() {
 
 int main() {
     try {
-        cout << "Function main calls RethrowException" << endl;
+        cout << "Function main() calls RethrowException" << endl;
         RethrowException();
     }
     catch (exception& e) {
-        cout << "Function main catches an exception: " << 
+        cout << "Function main() catches an exception: " << 
             e.what() << " and handles it" << endl;
     }
     return 0;

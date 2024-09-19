@@ -1,6 +1,5 @@
 #include <iostream>     // for cout
 #include <exception>
-#include <cmath>        // for log
 using namespace std;
 
 // function that throws an exception, catches it, and rethrows again
@@ -8,7 +7,7 @@ void RethrowException() {
     try {
         // throw an exception
         cout << "\nFunction RethrowException throws an exception " << endl;
-        throw (exception{"--- exception thrown in RethrowException ---"}); // throw an exception};
+        throw (runtime_error{"--- exception thrown in RethrowException ---"}); // throw an exception};
     }
     catch (exception& e) {
         cout << "Function RethrowException catches an exception: " << 

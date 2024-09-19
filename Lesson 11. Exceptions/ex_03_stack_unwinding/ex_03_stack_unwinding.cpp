@@ -1,6 +1,13 @@
 #include <iostream>     // for cout
 #include <exception>
 using namespace std;
+
+// Demonstrates stack unwinding
+// If an exception is thrown in a function, the stack is unwound.
+// It includes calling destructors for local variables
+// in the reverse order of their creation, 
+// as the program moves back up the call stack to find 
+// a matching exception handler (catch block).
 class MyClass{
 public:
     MyClass(int id): id(id){

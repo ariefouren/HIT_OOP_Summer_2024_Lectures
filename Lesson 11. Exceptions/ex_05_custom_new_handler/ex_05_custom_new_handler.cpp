@@ -3,8 +3,9 @@
 
 using namespace std;
 
-// demonstrates custom function to handle new failures
+// Demonstrates custom function to handle new failures
 
+// custom new exception handler
 void my_new_handler() {
     cout << "my_new_handler: out of memory" << endl;
     exit(EXIT_FAILURE); // terminate the program  with an error code
@@ -12,6 +13,9 @@ void my_new_handler() {
 
 int main() {
     // set my_new_handler as the handler for new failures
+    // set_new_handler is a function from <new> header
+    // that sets the new handler function to be called
+    // when operator new fails to allocate memory
     set_new_handler(my_new_handler);
 
     // try to allocate a large blocks of memory

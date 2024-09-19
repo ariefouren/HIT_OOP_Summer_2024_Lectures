@@ -2,9 +2,10 @@
 #include <exception>
 using namespace std;
 
-// demonstrates constructor that throws an exception
+// Demonstrates constructor that throws an exception
 // to indicate that the object cannot be created
-
+// Constructor can't return a value, so the best way
+// to indicate that the object can't be created is to throw an exception
 class Array {
     public:
         // constructor

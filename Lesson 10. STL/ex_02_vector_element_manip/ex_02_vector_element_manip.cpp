@@ -1,3 +1,6 @@
+// File: ex_02_vector_element_manip.cpp
+// demonstrates how to manipulate elements of a vector
+
 #include <iostream>
 # include <vector>
 #include <iterator> // for ostream_iterator
@@ -30,7 +33,7 @@ int main() {
     v1.insert(v1.begin()+2, 30); // insert 30 at the third position of v1
     v1.insert(v1.end()-1, 40); // insert 40 at the second last position of v1
     v1.push_back(50); // insert 50 at the last position of v1
-    cout << "after v1.at(0) = 10,\n" << 
+    cout << "after v1.[0] = 10,\n" << 
     "v1.at(1) = 20, \n" <<
     "v1.insert(v1.begin()+2, 30), \n" <<
     "v1.insert(v1.end()-1, 40), \n" <<

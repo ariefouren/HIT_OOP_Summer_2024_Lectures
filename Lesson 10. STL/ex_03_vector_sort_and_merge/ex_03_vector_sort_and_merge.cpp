@@ -21,6 +21,7 @@ int main() {
     cout << endl << endl;
 
     cout << "--- 1. Sorting a vector using sort() from <algorithm> ---" << endl;
+    // by default, sort() uses operator< to compare elements
     sort(v1.begin(), v1.end());
     sort(v2.begin(), v2.end());
     cout << "after sort(v1.begin(), v1.end()): " << endl;
@@ -42,6 +43,13 @@ int main() {
     cout << "v3: \t";
     copy(v3.begin(), v3.end(), out_it);
     cout << endl << endl;
+
+    cout << "--- 3. Sorting a vector in descending order using greater<int>() ---" << endl;
+    // sort in descending order using greater<int>() as a comparison function
+    sort(v3.begin(), v3.end(), greater<int>());
+    cout << "after sort(v3.begin(), v3.end(), greater<int>()): " << endl;
+    cout << "v3: \t";
+    copy(v3.begin(), v3.end(), out_it);
 
     return 0;
 }

@@ -14,7 +14,8 @@
 using namespace std;
 
 // Custom comparator function to compare <string, int> pairs by value (word count)
-bool greaterThenByValue(const pair<string, int>& a, const pair<string, int>& b) {
+bool greaterThenByValue(const pair<string, int>& a, 
+                    const pair<string, int>& b) {
     return a.second > b.second;  // Compare values
 }
 
@@ -104,7 +105,7 @@ int main() {
     // sort the vector in descending order by frequency
     // using a custom comparator function compareByValue
     sort(wordFrequencyVector.begin(), wordFrequencyVector.end(), 
-        greaterThenByValue);
+        greaterThenByValue); 
 
     // Create and open the output CSV file
     ofstream sortedOutputFile(filename + "_frequency_sorted.csv");

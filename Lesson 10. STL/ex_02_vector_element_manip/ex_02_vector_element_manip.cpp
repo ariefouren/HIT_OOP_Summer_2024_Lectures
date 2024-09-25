@@ -2,16 +2,16 @@
 // demonstrates how to manipulate elements of a vector
 
 #include <iostream>
-# include <vector>
+# include <vector> // #include <algorithms>
 #include <iterator> // for ostream_iterator
 using namespace std;
 
 int main() {
     cout << "Vector element manipulation" << endl << endl;
     cout << "--- 1. Creating a vector of integers ---" << endl;
-    vector<int> v1 = {1, 2, 3, 4, 5}; // create a vector of integers with 5 elements
+    vector<int> v1 = {1, 2, 3, 4, 5, 6}; // create a vector of integers with 5 elements
     vector<int> v2(v1.cbegin()+1, v1.cend()-2); // create a vector of integers with some of the elements of v1
-    
+    // v2 = {2, 3, 4}
     // create an ostream_iterator for printing, `\t`` is the separator
     ostream_iterator<int> out_it(cout, "\t"); 
     cout << "v1: ";
@@ -46,7 +46,8 @@ int main() {
     // try to access an element that is out of range
     try {
         cout << endl << "v1.at(100): " << v1.at(100) << endl; // try to access the 100th element of v1
-    } catch (const out_of_range& e) {
+    } 
+    catch (const out_of_range& e) {
         cout << "Exception: " << e.what() << endl; // print the exception message
     }
 
@@ -72,6 +73,7 @@ int main() {
     v1 = {1, 2, 3, 4, 5}; // reset v1
     v2 = {10, 20, 30}; // reset v2
     v1.insert(v1.begin(), v2.begin(), v2.end()); // insert all elements of v2 at the beginning of v1
+    // v1 = {10, 20, 30, 1, 2, 3, 4, 5} 
     cout << "after v1.insert(v1.begin(), v2.begin(), v2.end()): " << endl;
     cout << "v1: ";
     copy(v1.begin(), v1.end(), out_it); // print the elements of v1 using the ostream_iterator

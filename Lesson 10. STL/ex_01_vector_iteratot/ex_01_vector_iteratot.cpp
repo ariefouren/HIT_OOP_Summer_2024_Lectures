@@ -1,5 +1,5 @@
 #include <iostream>
-# include <vector>
+#include <vector>
 using namespace std;
 
 int main() {
@@ -27,7 +27,7 @@ int main() {
 
     cout << "Print the elements of the vector using iterator arithmetic: " << endl;
     vector<int>::iterator it = v.begin();
-    for(int i = 0; i < v.size(); i++) {
+      for(int i = 0; i < v.size(); i++) {
         cout << *(it + i) << " "; // print the elements of the vector using iterator arithmetic
     }
 

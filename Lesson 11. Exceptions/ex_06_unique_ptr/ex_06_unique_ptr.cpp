@@ -32,9 +32,12 @@ private:
 
 int main()
 {
+
     cout << "--- 1. Creating a unique_ptr to MyClass" << endl;
     // make_unique allocates memory for the object and returns a unique_ptr
     unique_ptr<MyClass> uptr1 = make_unique<MyClass>(42); 
+    // alternatively, you can use new to create a unique_ptr:
+    // unique_ptr<MyClass> uptr1(new MyClass(42));
 
     // Access the object using the pointer
     cout << "uptr1->get() = " << uptr1->get() << endl;
@@ -59,6 +62,7 @@ int main()
 
     cout << "The unique_ptr is destroyed when it goes out of scope" << endl;
     cout << "The destructor of unique_ptr calls the destructor of MyClass" << endl;
+
 
     return 0;
 }

@@ -1,0 +1,13 @@
+auto check_primes = [](int id, int last, atomic<int>& counter) {
+    while (true) {
+        // get the next number to check
+        // atomic fetch_add() returns the old value of the counter
+        // the operation is atomic and thread-safe
+        int n = counter.fetch_add(1);
+        if (n > last) break;
+        if (is_prime(n)) {
+            string msg = "#" + to_string(id) + ": " + to_string(n) + " is prime\n";
+            cout << msg;
+        }
+    }
+};

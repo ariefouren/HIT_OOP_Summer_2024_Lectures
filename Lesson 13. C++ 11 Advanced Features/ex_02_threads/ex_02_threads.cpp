@@ -1,21 +1,21 @@
+// File: ex_02_threads.cpp
+// demonstrates threads in C++ 11
+// creates 10 threads 
+// each thread prints its id, 
+// counts down from 10 to 0
+// prints "Liftoff!" and terminates
+
 #include <iostream>
 #include <thread>
 #include <vector>
-#include <chrono>
 #include <string>
-#include <random>        // for random number generation
 using namespace std;
-
 
 int main() {
     // create a vector of threads
     vector<thread> threads;
 
-    // create 10 threads 
-    // each thread prints its id, 
-    // counts down from 10 to 0
-    // prints "Liftoff!" and terminates
-
+    // launch 10 threads, each thread counts down from 10 to 0
     cout << "--- main: launching 10 threads...\n";
     for (int id = 0; id < 10; ++id) {
         // the thread constructor takes as argument
